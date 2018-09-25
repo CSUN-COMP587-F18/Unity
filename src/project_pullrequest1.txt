@@ -1,0 +1,11 @@
+9/25
+
+Despite my unfamiliarity with C# as a whole, I've found myself having less trouble than expected poring through this codebase. 
+Beyond the Unity Extension itself, this codebase also comprises GitHub's own API through which the extension interfaces.
+Both the GitHub API and the Extension provide tests, although the API is far more heavily tested than the extension as the extension
+appears to only be tested for the sole purpose of checking version numbers. Meanwhile, the GitHub API includes both Unit and Integration
+tests for most .cs files elsewhere in its directory - this would be the result of the main functionality being contained within the API
+rather than in the Extension loading it. It's difficult to figure out where to start testing in the API due to the generally
+high density of dependencies and complex code that comprise nearly all of it, but the areas that primarily rely on input/output
+from elsewhere are simpler to deal with. It's worth noting that there is a vast amount of untested checks regarding the display and 
+creation of seemingly everything involved in the extension - these would be relatively simple to write tests for in comparison.
