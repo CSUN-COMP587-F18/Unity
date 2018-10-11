@@ -114,5 +114,22 @@ namespace TestUtils
             Action action = () => gitStatus.AssertEqual(other);
             action.ShouldThrow<AssertionException>();
         }
+
+        public static void AssertEqual(this GitRemote gitRemote, GitRemote other)
+        {
+            gitRemote.Name.Should().Be(other.Name);
+            gitRemote.Url.Should().Be(other.Url);
+            gitRemote.Login.Should().Be(other.Login);
+            gitRemote.User.Should().Be(other.User);
+            gitRemote.Token.Should().Be(other.Token);
+            gitRemote.Host.Should().Be(other.Host);
+            gitRemote.Function.Should().Be(other.Function);
+        }
+
+        public static void AssertNotEqual(this GitRemote gitRemote, GitRemote other)
+        {
+            Action action = () => gitRemote.AssertEqual(other);
+            action.ShouldThrow<AssertionException>();
+        }
     }
 }
