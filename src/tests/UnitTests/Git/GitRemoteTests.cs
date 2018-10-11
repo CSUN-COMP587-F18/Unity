@@ -18,5 +18,23 @@ namespace UnitTests
 
             gitRemote.AssertEqual(gitRemote);
         }
+
+        [Test]
+        public void ShouldNotEqualDifferentRemote()
+        {
+            var gitRemote = new GitRemote("Name",
+                "Host", "URL",
+                GitRemoteFunction.Unknown,
+                "User",
+                "Login", "Token");
+
+            var gitRemote2 = new GitRemote("`Name",
+               "`Host", "`URL",
+               GitRemoteFunction.Push,
+               "`User",
+               "`Login", "`Token");
+
+            gitRemote.AssertNotEqual(gitRemote2);
+        }
     }
 }
