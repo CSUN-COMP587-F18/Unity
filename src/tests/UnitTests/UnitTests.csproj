@@ -96,6 +96,7 @@
     <Compile Include="IO\LinuxBasedGitEnvironmentTests.cs" />
     <Compile Include="IO\WindowsDiskUsageOutputProcessorTests.cs" />
     <Compile Include="IO\WindowsGitEnvironmentTests.cs" />
+    <Compile Include="OutputProcessors\LineProcessorTests.cs" />
     <Compile Include="Primitives\SerializationTests.cs" />
     <Compile Include="Primitives\UriStringTests.cs" />
     <Compile Include="ProcessManagerExtensions.cs" />
