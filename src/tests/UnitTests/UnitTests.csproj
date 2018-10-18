@@ -80,6 +80,7 @@
     <Compile Include="IO\LinuxDiskUsageOutputProcessorTests.cs" />
     <Compile Include="IO\LockOutputProcessorTests.cs" />
     <Compile Include="IO\CountObjectProcessorTests.cs" />
+    <Compile Include="Git\GitRemoteTests.cs" />
     <Compile Include="IO\VersionOutputProcessorTests.cs" />
     <Compile Include="IO\RemoteListOutputProcessorTests.cs" />
     <Compile Include="IO\BaseOutputProcessorTests.cs" />
