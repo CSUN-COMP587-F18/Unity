@@ -48,6 +48,22 @@ namespace UnitTests
             var line = new LineParser("apple orange banana");
             Assert.True(line.ReadUntilLast("ana").Equals("apple orange ban"));
         }
+
+        // This test verifies that SkipWhitespace correctly throws an exception when presented with an empty string.
+        [Test]
+        public void EmptyStringThrowsExceptionWhitespace()
+        {
+            var line = new LineParser("");
+            Assert.Throws<InvalidOperationException>(() => line.SkipWhitespace());
+        }
+
+        // This test verifies that MoveToAfter correctly throws an exception when presented with an empty string.
+        [Test]
+        public void EmptyStringThrowsExceptionMoveToAfter()
+        {
+            var line = new LineParser("");
+            Assert.Throws<InvalidOperationException>(() => line.MoveToAfter(""));
+        }
     }
 }
 
