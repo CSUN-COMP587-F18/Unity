@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\KeychainTests.cs" />
+    <Compile Include="Extensions\StringExtensionTests.cs" />
     <Compile Include="Extensions\ListExtensionTests.cs" />
     <Compile Include="Git\ValidationTests.cs" />
     <Compile Include="Git\GitConfigTests.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="IO\LinuxBasedGitEnvironmentTests.cs" />
     <Compile Include="IO\WindowsDiskUsageOutputProcessorTests.cs" />
     <Compile Include="IO\WindowsGitEnvironmentTests.cs" />
+    <Compile Include="OutputProcessors\LineProcessorTests.cs" />
     <Compile Include="Primitives\SerializationTests.cs" />
     <Compile Include="Primitives\UriStringTests.cs" />
     <Compile Include="ProcessManagerExtensions.cs" />
