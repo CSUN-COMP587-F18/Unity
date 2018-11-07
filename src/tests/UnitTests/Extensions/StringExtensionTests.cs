@@ -19,6 +19,24 @@ namespace UnitTests
             Assert.True(StringExtensions.Contains("this string contains borb", "borb", StringComparison.Ordinal));
         }
 
+        // This automated test checks if a certain substring is in a randomly generated string.
+        [Test]
+        public void StringContainsSubstringAutomated()
+        {
+            var charlist = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var random = new Random();
+            for (int stringLength = 1; stringLength < 100; stringLength++)
+            {
+                var randomString = new char[stringLength];
+                for (int y = 0; y < randomString.Length; y++)
+                {
+                    randomString[y] = charlist[random.Next(charlist.Length)];
+                }
+                var testString = new String(randomString);
+                Assert.True(StringExtensions.Contains(testString, testString.First().ToString(), StringComparison.Ordinal));
+            }
+        }
+
         // This test checks if certain chars exist in a provided string.
         [Test]
         public void StringContainsChars()
@@ -32,6 +50,24 @@ namespace UnitTests
         public void StringStartsWithChar()
         {
             Assert.True(StringExtensions.StartsWith("abcd", 'a'));
+        }
+
+        // This test checks if a randomly generated string begins with a certain char.
+        [Test]
+        public void StringStartsWithCharAutomated()
+        {
+            var charlist = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var random = new Random();
+            for (int stringLength = 1; stringLength < 100; stringLength++)
+            {
+                var randomString = new char[stringLength];
+                for (int y = 0; y < randomString.Length; y++)
+                {
+                    randomString[y] = charlist[random.Next(charlist.Length)];
+                }
+                var testString = new String(randomString);
+                Assert.True(StringExtensions.StartsWith(testString, testString.First()));
+            }
         }
 
         // This test checks that the RightAfter returns everything in a String after a provided substring in it.
