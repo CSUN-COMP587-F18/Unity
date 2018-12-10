@@ -1,0 +1,5 @@
+Nothing to see or review here in terms of code, this is just a progress update as I recently resubmitted my project proposal.
+I'm doing whatever I can to get property testing working in this project, 
+but it's apparently hilariously outdated in its framework which means its incompatiable with fscheck (the property testing tool), 
+and attempting to change this framework winds up wrecking the whole thing. 
+Will continue to attempt sorting out this nightmare over the next week.
